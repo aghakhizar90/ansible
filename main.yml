@@ -4,7 +4,7 @@
     - name: Hello Message
       debug:
         msg: "Hello World!"
-    - name: Hello Message
+    - name: Creating a file
       file:
         path: "/home/akhizar1/helloworld.txt"
         state: touch
