@@ -6,6 +6,6 @@
         msg: "Hello World!"
     - name: Creating a file
       file:
-        path: "/home/akhizar1/helloworld.txt"
+        path: "helloworld.txt"
         state: touch
       become: yes
