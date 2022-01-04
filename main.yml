@@ -1,5 +1,7 @@
 - name: Hello World Sample
   hosts: all
+  become: yes
+  become_user: akhizar1
   tasks:
     - name: Hello Message
       command: pwd
@@ -10,8 +12,6 @@
       file:
         path: "/home/akhizar1/helloworld.txt"
         state: touch
-      become: yes
-      become_user: akhizar1
     - name: Hello Text
       command: ls -l
       register: hello1
