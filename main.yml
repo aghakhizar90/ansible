@@ -1,7 +1,5 @@
 - name: Hello World Sample
   hosts: all
-  become: yes
-  become_user: akhizar1
   tasks:
     - name: Hello Message
       command: pwd
@@ -10,7 +8,7 @@
     - debug: msg="{{ hello.stderr }}"
     - name: Creating a file
       file:
-        path: "/home/akhizar1/helloworld.txt"
+        path: "helloworld.txt"
         state: touch
     - name: Hello Text
       command: ls -l
