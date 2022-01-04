@@ -2,8 +2,7 @@
   hosts: all
   tasks:
     - name: Hello Message
-      debug:
-        msg: "Hello World!"
+      command: pwd
     - name: Creating a file
       file:
         path: "helloworld.txt"
