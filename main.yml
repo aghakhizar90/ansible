@@ -11,7 +11,7 @@
         path: "helloworld.txt"
         state: touch
       become: yes
-    - name: Hello Message
+    - name: Hello Text
       command: ls -l
       register: hello1
     - debug: msg="{{ hello1.stdout }}" 
