@@ -8,9 +8,10 @@
     - debug: msg="{{ hello.stderr }}"
     - name: Creating a file
       file:
-        path: "helloworld.txt"
+        path: "/home/akhizar1/helloworld.txt"
         state: touch
       become: yes
+      become_user: akhizar1
     - name: Hello Text
       command: ls -l
       register: hello1
