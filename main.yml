@@ -3,6 +3,9 @@
   tasks:
     - name: Hello Message
       command: pwd
+      register: hello
+    - debug: msg="{{ hello.stdout }}" 
+    - debug: msg="{{ hello.stderr }}"
     - name: Creating a file
       file:
         path: "helloworld.txt"
